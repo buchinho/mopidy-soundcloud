@@ -1,35 +1,32 @@
-*.py[cod]
-
-# C extensions
-*.so
-
-# Packages
-*.egg
-*.egg-info
+.project
+.tox
 dist
-build
-eggs
-parts
-bin
-var
+*.py[cod]
 sdist
-develop-eggs
 .installed.cfg
-lib
-lib64
-
 # Installer logs
 pip-log.txt
-
+*.so
+debian/files
+develop-eggs
+*.egg
+parts
+build
+# C extensions
+lib64
 # Unit test / coverage reports
-.coverage
-.tox
+bin
 nosetests.xml
-
-# Translations
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
 .pydevproject
+eggs
+*.egg-info
+var
+# Translations
+# Packages
+lib
+# Mr Developer
+/debian/mopidy-soundcloud
+.coverage
+debian/mopidy-soundcloud.**
+*.mo
+.mr.developer.cfg

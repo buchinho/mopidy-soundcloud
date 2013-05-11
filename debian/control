@@ -2,54 +2,23 @@ Source: mopidy-soundcloud
 Maintainer: dz0ny <dz0ny@shortmail.com>
 Section: python
 Priority: optional
-Build-Depends: python-setuptools (>= 0.6b3), debhelper (>= 7), python-support (>= 0.8.4)
-Standards-Version: 3.8.4
+Build-Depends: debhelper (>> 7), python-all (>= 2.6.6-3~)
+Vcs-Git: git://github.com/dz0ny/mopidy-soundcloud.git
+Homepage: https://github.com/dz0ny/mopidy-soundcloud
+Standards-Version: 3.9.2
 
 Package: mopidy-soundcloud
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}, mopidy, python-requests
-XB-Python-Version: ${python:Versions}
 Provides: ${python:Provides}
 Description: SoundCloud extension for Mopidy
-  Mopidy-SoundCloud
-  =================
-
-  `Mopidy <http://www.mopidy.com/>`_ extension for playing music from
-  `SoundCloud <http://www.soundcloud.com>`_.
-
-
-  Usage
-  -----
-
-  #. You must register for a user account at http://www.soundcloud.com/
-
-  #. Install the Mopidy-Soundcloud extension by running::
-
-      sudo pip install mopidy-soundcloud
-
-  #. You need a SoundCloud authentication token for Mopidy from
-     http://www.mopidy.com/authenticate
-
-  #. Add the authentication token to the ``mopidy.conf`` config file::
-
-      [soundcloud]
-      auth_key = 1-1111-1111111
-
-  #. Extra playlists from http://www.soundcloud.com/explore can be retrieved by
-     setting the ``soundcloud/explore`` config value. For example, if you want
-     Smooth Jazz from https://soundcloud.com/explore/jazz%2Bblues your entry
-     would be "jazz%2Bblues/Smooth Jazz". Example config::
-
-      [soundcloud]
-      auth_key = 1-1111-1111111
-      explore = electronic/Ambient, pop/New Wave, rock/Indie
-
-
-  Project resources
-  -----------------
-
-  - `Source code <https://github.com/dz0ny/mopidy-soundcloud>`_
-  - `Issue tracker <https://github.com/mopidy/mopidy-soundcloud/issues>`_
-  - `Download development snapshot
-    <https://github.com/dz0ny/mopidy-soundcloud/tarball/develop#egg=mopidy-soundcloud-dev>`_
-
+  Mopidy extension for playing music from SoundCloud.
+  You must register for a user account at http://www.soundcloud.com/
+  You need a SoundCloud authentication token for Mopidy from http://www.mopidy.com/authenticate
+  Add the authentication token to the mopidy.conf config file:
+  [soundcloud]
+  auth_key = 1-1111-1111111
+  Extra playlists from http://www.soundcloud.com/explore can be retrieved by setting the soundcloud/explore config value. For example, if you want Smooth Jazz from https://soundcloud.com/explore/jazz%2Bblues your entry would be "jazz%2Bblues/Smooth Jazz". Example config:
+  [soundcloud]
+  auth_key = 1-1111-1111111
+  explore = electronic/Ambient, pop/New Wave, rock/Indie
